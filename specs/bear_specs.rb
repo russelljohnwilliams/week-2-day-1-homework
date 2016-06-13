@@ -9,7 +9,13 @@ class TestBear < MiniTest::Test
 
   def test_bears_name
     assert_equal("Gentle Ben", @bear.bears_name)
+  end 
+
+  def test_bear_type
+    assert_equal("Grizzly", @bear.bears_name)
   end
+
+
   
 end
 
