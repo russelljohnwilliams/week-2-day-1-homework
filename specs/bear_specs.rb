@@ -12,7 +12,7 @@ class TestBear < MiniTest::Test
   end 
 
   def test_bear_type
-    assert_equal("Grizzly", @bear.bears_name)
+    assert_equal("Grizzly Bear", @bear.bear_type)
   end
 
 
