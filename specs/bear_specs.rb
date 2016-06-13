@@ -4,7 +4,7 @@ require_relative '../bear'
 class TestBear < MiniTest::Test
 
   def setup
-   @bear = Bear.new( "Gentle Ben", "Grizzly Bear", "Hear me roar!")
+   @bear = Bear.new( "Gentle Ben", "Grizzly Bear", "Prod Bear")
   end
 
   def test_bears_name
@@ -13,6 +13,11 @@ class TestBear < MiniTest::Test
 
   def test_bear_type
     assert_equal("Grizzly Bear", @bear.bear_type)
+  end
+
+  def test_roar
+    @bear.roar()
+    assert_equal("GRAAAOOOOOWWWWLLLLL!!!!", @bear.roar)
   end
 
 
