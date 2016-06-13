@@ -4,7 +4,17 @@ require_relative '../bear'
 class TestBear < MiniTest::Test
 
   def setup
-   @bear = Bear.new( "Gentle Ben", "Grizzly Bear", "Prod Bear")
+   @bear = Bear.new( "Gentle Ben", "Grizzly Bear", "Prod Bear", [])
+  end
+
+  def river
+    @fish1 = Fish.new("Bob")
+    @fish2 = Fish.new("Finn")
+    @fish3 = Fish.new("Roger Moore")
+    
+    river = [fish1, fish2, fish3]
+
+    @river_tyne = River.new(river)
   end
 
   def test_bears_name
@@ -17,16 +27,19 @@ class TestBear < MiniTest::Test
 
   def test_roar
     @bear.roar()
-    assert_equal("GRAAAOOOOOWWWWLLLLL!!!!", @bear.roar)
+    assert_equal("GRRRAAAOOOOOWWWWLLLLL!!!!", @bear.roar)
+  end
+
+  def test_hungry_bear
+    assert_equal([], @bear.food)
   end
 
 
-  
+
 end
 
-# class TestFish
-#   @fish1 = Fish.new("Bob")
-#   @fish2 = Fish.new("Finn")
-#   @fish3 = Fish.new("Roger Moore")
-# end
+
+
+
+
 
