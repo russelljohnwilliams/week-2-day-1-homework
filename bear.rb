@@ -1,20 +1,22 @@
-require 'pry-bybug'
+# require 'pry-bybug'
 
 class Bear
-  def initialize(input_bear_name, input_bear_type, input_roar, input_tummy)
-    @bear_name = input_bear_name
-    @bear_type = input_bear_type
+  def initialize(input_bears_name, input_bears_type, input_roar)
+    @bears_name = input_bears_name
+    @bears_type = input_bears_type
     @roar = input_roar
-    # @tummy = input_tummy
   end
+
+  def bears_name
+    return @bears_name
+  end
+
 end
 
-class Fish
-  def initialize(input_fish_name)
-    @fish_name = input_fish_name
-  end
-end
 
 
-
-end 
+# class Fish
+#   def initialize(input_fish_name)
+#     @fish_name = input_fish_name
+#   end
+# end
