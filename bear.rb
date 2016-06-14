@@ -1,4 +1,4 @@
-# require 'pry-bybug'
+# require('pry-bybug')
 
 class Bear
 
@@ -22,6 +22,15 @@ class Bear
   def roar()
     return "GRRRAAAOOOOOWWWWLLLLL!!!!" if @get_reaction == "Prod Bear"
   end
+
+  def bear_eating()
+    # binding.pry
+    if @river_tyne.count >= 1
+      @food << @river_tyne.pop
+    end
+    return @food
+  end
+
 end
 
 class Fish
@@ -29,16 +38,4 @@ class Fish
   def initialize(input_fish_name)
     @fish_name = input_fish_name
   end
-
-  def eat_fish()
-    names_array = []
-    for account in @accounts
-      name = account.holder_name
-      names_array.push name
-    end
-    names_array = names_array.sort_by(&:length)
-    return longest_name = names_array[-1]
-  end
- 
 end
-

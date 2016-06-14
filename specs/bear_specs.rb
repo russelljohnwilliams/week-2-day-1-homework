@@ -34,6 +34,9 @@ class TestBear < MiniTest::Test
     assert_equal([], @bear.food)
   end
 
+  def test_bear_eating
+    assert_equal([1], @bear.food)
+  end
 
 
 end
